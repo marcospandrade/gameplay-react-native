@@ -3,6 +3,7 @@ import { FlatList, View, Text } from "react-native";
 
 import { styles } from "./styles";
 
+import { Background } from '../../components/Background';
 import { Profile } from "../../components/Profile";
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
@@ -43,7 +44,7 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
     }
     return (
-        <View style={styles.container}>
+        <Background>
             <View style={styles.header}>
                 <Profile />
                 <ButtonAdd />
@@ -73,6 +74,6 @@ export function Home() {
                     />
                 </View>
             </View>
-        </View>
+        </Background>
     );
 }
