@@ -36,5 +36,4 @@ export const styles = StyleSheet.create({
         paddingVertical:20,
         marginBottom: getBottomSpace(),
     }
-
 })
