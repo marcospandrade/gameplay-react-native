@@ -4,7 +4,11 @@ import { useFonts } from '@expo-google-fonts/inter';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 // import { StatusBar } from 'react-native';
-import { StatusBar } from 'react-native';
+import { StatusBar, LogBox } from 'react-native';
+
+LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.'])
+
+import { AuthProvider } from './src/hooks/auth';
 
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
@@ -28,7 +32,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   );
 }
