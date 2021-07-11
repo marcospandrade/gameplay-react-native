@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\PITANG\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add axios
+  C:\Program Files\nodejs\node.exe C:\Users\PITANG\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add dotenv babel-plugin-inline-dotenv
 
 PATH: 
   C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\PITANG\AppData\Local\Microsoft\WindowsApps;C:\Users\PITANG\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2020.3.3\bin;;C:\Program Files\Python37;C:\Program Files\Python37\Scripts;C:\Users\PITANG\AppData\Roaming\npm;
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\PITANG\Documents\nlw-react-native\gameplay\node_modules\@babel\helper-compilation-targets\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\PITANG\Documents\nlw-react-native\gameplay\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -32,6 +32,7 @@ npm manifest:
       "@react-native-community/masked-view": "0.1.10",
       "@react-navigation/native": "^5.9.4",
       "@react-navigation/stack": "^5.14.5",
+      "axios": "^0.21.1",
       "expo": "~41.0.1",
       "expo-app-loading": "^1.0.3",
       "expo-auth-session": "~3.2.3",
@@ -2363,6 +2364,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.4.tgz#9e0ae84ecff20caae6a94a1c3bc39b955649b7a9"
     integrity sha512-SA5mXJWrId1TaQjfxUYghbqQ/hYioKmLJvPJyDuYRtXXenFNMjj4hSSt1Cf1xsuXSXrtxrVC5Ot4eU6cOtBDdA==
   
+  axios@^0.21.1:
+    version "0.21.1"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+    integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+    dependencies:
+      follow-redirects "^1.10.0"
+  
   babel-plugin-dynamic-import-node@^2.3.3:
     version "2.3.3"
     resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -3788,6 +3796,11 @@ Lockfile:
     dependencies:
       locate-path "^6.0.0"
       path-exists "^4.0.0"
+  
+  follow-redirects@^1.10.0:
+    version "1.14.1"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
+    integrity sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==
   
   fontfaceobserver@^2.1.0:
     version "2.1.0"
