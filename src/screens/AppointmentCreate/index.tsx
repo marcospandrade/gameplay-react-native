@@ -136,6 +136,7 @@ export function AppointmentCreate() {
                                 <View style={styles.column}>
                                     <SmallInput
                                         maxLength={2}
+                                        keyboardType="numeric"
                                         onChangeText={setDay}
                                     />
                                     <Text style={styles.divider}>
@@ -143,6 +144,7 @@ export function AppointmentCreate() {
                                     </Text>
                                     <SmallInput
                                         maxLength={2}
+                                        keyboardType="numeric"
                                         onChangeText={setMonth}
                                     />
                                 </View>
@@ -155,6 +157,7 @@ export function AppointmentCreate() {
                                 <View style={styles.column}>
                                     <SmallInput
                                         maxLength={2}
+                                        keyboardType="numeric"
                                         onChangeText={setHour}
                                     />
                                     <Text style={styles.divider}>
@@ -162,6 +165,7 @@ export function AppointmentCreate() {
                                     </Text>
                                     <SmallInput
                                         maxLength={2}
+                                        keyboardType="numeric"
                                         onChangeText={setMinute}
                                     />
                                 </View>

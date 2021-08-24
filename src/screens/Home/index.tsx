@@ -36,6 +36,8 @@ export function Home() {
   } 
   
   async function loadAppointments() {
+    // await AsyncStorage.setItem(COLLECTION_APPOINTMENTS, JSON.stringify([]));
+
     const response = await AsyncStorage.getItem(COLLECTION_APPOINTMENTS);
     const storage: AppointmentProps[] = response ? JSON.parse(response) : [];
 

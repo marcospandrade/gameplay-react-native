@@ -85,6 +85,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   }
 
   async function loadUserStorageData() {
+    // await AsyncStorage.setItem(COLLECTION_USER, JSON.stringify({}));
     const storage = await AsyncStorage.getItem(COLLECTION_USER);
 
     if (storage) {
