@@ -47,6 +47,7 @@ export function AppointmentDetails() {
         }
     }
 
+    //funciona quando você é anfitrião do servidor
     function handleShareInvitation() {
         const message = Platform.OS === 'ios'
             ? `Junte-se a ${guildSelected.guild.name}`
