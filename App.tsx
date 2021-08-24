@@ -6,7 +6,7 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 // import { StatusBar } from 'react-native';
 import { StatusBar, LogBox } from 'react-native';
 
-LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.'])
+// LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.'])
 
 import { AuthProvider } from './src/hooks/auth';
 

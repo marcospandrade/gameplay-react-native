@@ -1,12 +1,13 @@
-import React, { ReactNode } from "react";
-import { LinearGradient } from "expo-linear-gradient";
+import React, { ReactNode } from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
 
-import { styles } from "./styles";
-import { theme } from "../../global/styles/theme";
+import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
 
 type Props = {
-    children: ReactNode
+    children: ReactNode;
 }
+
 export function Background({ children }: Props) {
     const { secondary80, secondary100 } = theme.colors;
 
@@ -15,7 +16,7 @@ export function Background({ children }: Props) {
             style={styles.container}
             colors={[secondary80, secondary100]}
         >
-            { children }
+            {children}
         </LinearGradient>
     )
 }

@@ -56,6 +56,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       setLoading(true);
 
       const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
+      // const authUrl = "https://discord.com/api/oauth2/authorize?client_id=879724858748071946&redirect_uri=https%3A%2F%2Fauth.expo.io%2F%40marcsandrade%2Fnew-gameplay&response_type=code&scope=identify%20email%20connections%20guilds";
 
       const { type, params } = await AuthSession
         .startAsync({ authUrl }) as AuthorizationResponse;

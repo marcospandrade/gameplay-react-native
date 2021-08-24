@@ -4,6 +4,7 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        alignItems: 'center',
     },
     user: {
         flexDirection: 'row',
@@ -23,4 +24,4 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.text400,
         color:theme.colors.highlight
     }
-})
+});

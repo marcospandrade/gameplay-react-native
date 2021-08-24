@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 8,
-        marginRight: 8
+        marginRight: 8,
     },
     content: {
         width: 100,
@@ -36,12 +36,12 @@ export const styles = StyleSheet.create({
         borderRadius: 3
     },
     checked: {
+        top: 7,
+        right: 7,
         width: 10,
         height: 10,
         backgroundColor: theme.colors.primary,
         position: 'absolute',
-        top: 7,
-        right: 7,
         borderRadius: 3 
     }
-})
+});
