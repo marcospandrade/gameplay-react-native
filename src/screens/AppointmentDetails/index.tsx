@@ -3,6 +3,7 @@ import { useRoute } from '@react-navigation/native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Fontisto } from '@expo/vector-icons';
 import { Text, ImageBackground, View, FlatList, Alert, Share, Platform } from 'react-native';
+import * as Linking from 'expo-linking';
 
 import { Background } from '../../components/Background';
 import { Header } from '../../components/Header';
@@ -57,6 +58,14 @@ export function AppointmentDetails() {
             message,
             url: widget.instant_invite
         });
+    }
+
+    function handleOpenGuild() {
+        try {
+            Linking.openURL(widget.instant_invite);
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     useEffect(() => {
@@ -120,7 +129,7 @@ export function AppointmentDetails() {
             }
 
             <View style={styles.footer}>
-                <ButtonIcon title="Entrar na partida" />
+                <ButtonIcon title="Entrar na partida" onPress={handleOpenGuild} />
             </View>
         </Background>
     )
