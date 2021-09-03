@@ -77,6 +77,7 @@ export function AppointmentDetails() {
             <Header
                 title="Detalhes"
                 action={
+                    guildSelected.guild.owner &&
                     <BorderlessButton onPress={handleShareInvitation}>
                         <Fontisto
                             name="share"
@@ -128,9 +129,12 @@ export function AppointmentDetails() {
 
             }
 
-            <View style={styles.footer}>
-                <ButtonIcon title="Entrar na partida" onPress={handleOpenGuild} />
-            </View>
+            {
+                guildSelected.guild.owner &&
+                <View style={styles.footer}>
+                    <ButtonIcon title="Entrar na partida" onPress={handleOpenGuild} />
+                </View>
+            }
         </Background>
     )
 }
