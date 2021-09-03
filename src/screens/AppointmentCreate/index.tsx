@@ -199,7 +199,7 @@ export function AppointmentCreate() {
                 </ScrollView>
             </Background>
 
-            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds}>
+            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds} marginTopProp={100}>
                 <Guilds handleGuildSelect={handleGuildSelect} />
             </ModalView>
 

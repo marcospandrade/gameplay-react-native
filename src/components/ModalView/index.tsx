@@ -11,9 +11,10 @@ import { styles } from "./styles";
 
 type Props = ModalProps & {
   children: ReactNode;
+  marginTopProp?: number;
   closeModal: () => void;
 }
-export function ModalView({ children, closeModal, ...rest }: Props) {
+export function ModalView({ children, marginTopProp, closeModal, ...rest }: Props) {
   return (
     <Modal
       transparent
@@ -23,7 +24,7 @@ export function ModalView({ children, closeModal, ...rest }: Props) {
     >
       <TouchableWithoutFeedback onPress={closeModal}>
         <View style={styles.overlay}>
-          <View style={styles.container}>
+          <View style={[styles.container, { marginTop: marginTopProp }]}>
             <Background>
               <View style={styles.bar} />
               {children}

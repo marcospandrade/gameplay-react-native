@@ -1,48 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { styles } from './styles';
 import { Avatar } from '../Avatar';
 import { useAuth } from '../../hooks/auth';
+import { ModalView } from '../ModalView';
+import { Logout } from '../../screens/Logout';
 
 export function Profile() {
     const { user, signOut } = useAuth();
-    
+    const [openModalLogout, setOpenModalLogout] = useState(false);
+
+    function handleModalLogout() {
+        setOpenModalLogout(!openModalLogout);
+    }
+
     function handleSignOut() {
         Alert.alert('Logout', 'Deseja sair do GamePlay?',
-        [
-            {
-                text: 'Não',
-                style: 'cancel'
-            },
-            {
-                text: 'Sim',
-                onPress: () => signOut()
-            }
-        ])
+            [
+                {
+                    text: 'Não',
+                    style: 'cancel'
+                },
+                {
+                    text: 'Sim',
+                    onPress: () => signOut()
+                }
+            ])
     }
 
     return (
-        <View style={styles.container}>
+        <>
+            <View style={styles.container}>
+                <RectButton onPress={handleModalLogout}>
+                    <Avatar urlImage={user.avatar} />
+                </RectButton>
+                <View>
+                    <View style={styles.user}>
+                        <Text style={styles.greeting}>
+                            Olá,
+                        </Text>
+                        <Text style={styles.username}>
+                            {user.firstName}
+                        </Text>
+                    </View>
 
-            <RectButton onPress={handleSignOut}>
-                <Avatar urlImage={user.avatar} />
-            </RectButton>
-            <View>
-                <View style={styles.user}>
-                    <Text style={styles.greeting}>
-                        Olá,
-                    </Text>
-                    <Text style={styles.username}>
-                        {user.firstName}
+                    <Text style={styles.message}>
+                        {/* vetor de frases aleatórias */}
+                        Hoje é dia de vitória
                     </Text>
                 </View>
-
-                <Text style={styles.message}>
-                    {/* vetor de frases aleatórias */}
-                    Hoje é dia de vitória
-                </Text>
             </View>
-        </View>
+            <ModalView visible={openModalLogout} closeModal={handleModalLogout} marginTopProp={550}>
+                <Logout />
+            </ModalView>
+        </>
     )
 }
